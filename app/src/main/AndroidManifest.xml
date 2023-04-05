@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="net.sourceforge.opencamera"
+    package="com.peter.easycamera"
     android:versionCode="87"
     android:versionName="1.51.1"
     android:installLocation="auto"
@@ -36,13 +36,13 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name=".OpenCameraApplication"
+        android:name="com.peter.easycamera.OpenCameraApplication"
         android:theme="@style/AppTheme"
         android:largeHeap="true"
         >
         <!-- should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html -->
         <activity
-            android:name="net.sourceforge.opencamera.MainActivity"
+            android:name="com.peter.easycamera.MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:clearTaskOnLaunch="true"
             android:exported="true"
@@ -80,7 +80,7 @@
             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts" />
         </activity>
         <activity
-            android:name="net.sourceforge.opencamera.remotecontrol.DeviceScanner"
+            android:name="com.peter.easycamera.remotecontrol.DeviceScanner"
             android:label="@string/scan_ble"
             android:exported="false"
         >
@@ -88,7 +88,7 @@
 
         <!-- should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html -->
         <activity
-            android:name="TakePhoto"
+            android:name="com.peter.easycamera.TakePhoto"
             android:label="@string/take_photo"
             android:icon="@drawable/ic_launcher_take_photo"
             android:configChanges="orientation|screenSize|keyboardHidden"
@@ -101,7 +101,7 @@
         <receiver
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
-            android:name="MyWidgetProvider"
+            android:name="com.peter.easycamera.MyWidgetProvider"
             android:exported="true">
             <intent-filter >
                  <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -117,7 +117,7 @@
         <receiver
             android:icon="@drawable/ic_launcher_take_photo"
             android:label="@string/take_photo"
-            android:name="MyWidgetProviderTakePhoto"
+            android:name="com.peter.easycamera.MyWidgetProviderTakePhoto"
             android:exported="true">
             <intent-filter >
                  <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -128,7 +128,7 @@
         </receiver>
         <!-- should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html -->
         <service
-            android:name="net.sourceforge.opencamera.MyTileService"
+            android:name="com.peter.easycamera.MyTileService"
             android:icon="@drawable/ic_photo_camera_white_48dp"
             android:label="@string/camera"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
@@ -139,7 +139,7 @@
         </service>
         <!-- should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html -->
         <service
-            android:name="net.sourceforge.opencamera.MyTileServiceVideo"
+            android:name="com.peter.easycamera.MyTileServiceVideo"
             android:icon="@drawable/ic_videocam_white_48dp"
             android:label="@string/record_video"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
@@ -150,7 +150,7 @@
         </service>
         <!-- should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html -->
         <service
-            android:name="net.sourceforge.opencamera.MyTileServiceFrontCamera"
+            android:name="com.peter.easycamera.MyTileServiceFrontCamera"
             android:icon="@drawable/ic_face_white_48dp"
             android:label="@string/selfie"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
@@ -159,7 +159,7 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
-        <service android:name="net.sourceforge.opencamera.remotecontrol.BluetoothLeService"
+        <service android:name="com.peter.easycamera.remotecontrol.BluetoothLeService"
             android:enabled="true"
             android:exported="false"
             />
